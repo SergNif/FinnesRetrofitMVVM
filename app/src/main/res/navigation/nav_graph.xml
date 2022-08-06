@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/page1MaFemaleDataFragment">
+
+    <fragment
+        android:id="@+id/page1MaFemaleDataFragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page1MaFemaleDataFragment"
+        android:label="Page1MaFemaleDataFragment"
+        tools:layout="@layout/fragment_page1_ma_female_data"
+        >
+        <action
+            android:id="@+id/action_page1MaFemaleDataFragment_to_page2Data1Fragment"
+            app:destination="@id/page2Data1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page2Data1Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page2Data1Fragment"
+        android:label="Page2Data1Fragment"
+        tools:layout="@layout/fragment_page2_data1">
+        <action
+            android:id="@+id/action_page2Data1Fragment_to_page3Data2Fragment"
+            app:destination="@id/page3Data2Fragment" />
+        <action
+            android:id="@+id/action_page2Data1Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page3Data2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page3Data2Fragment"
+        android:label="Page3Data2Fragment"
+        tools:layout="@layout/fragment_page3_data2"
+        >
+        <action
+            android:id="@+id/action_page3Data2Fragment_to_page4Data2Fragment"
+            app:destination="@id/page4Data2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page4Data2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page4Data2Fragment"
+        android:label="Page4Data2Fragment"
+        tools:layout="@layout/fragment_page4_data2"
+        >
+        <action
+            android:id="@+id/action_page4Data2Fragment_to_page5Data2Fragment"
+            app:destination="@id/page5Data2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page5Data2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page5Data2Fragment"
+        android:label="Page5Data2Fragment"
+        tools:layout="@layout/fragment_page5_data2"
+        >
+        <action
+            android:id="@+id/action_page5Data2Fragment_to_page6Data2Fragment"
+            app:destination="@id/page6Data2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page6Data2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page6Data2Fragment"
+        android:label="Page6Data2Fragment"
+        tools:layout="@layout/fragment_page6_data2"
+        >
+        <action
+            android:id="@+id/action_page6Data2Fragment_to_page7Data2Fragment"
+            app:destination="@id/page7Data2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page7Data2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page7Data2Fragment"
+        android:label="Page7Data2Fragment"
+        tools:layout="@layout/fragment_page7_data2"
+        >
+        <action
+            android:id="@+id/action_page7Data2Fragment_to_page8Data2Fragment"
+            app:destination="@id/page8Data2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page8Data2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page8Data2Fragment"
+        android:label="Page8Data2Fragment"
+        tools:layout="@layout/fragment_page8_data2"
+        >
+        <action
+            android:id="@+id/action_page8Data2Fragment_to_page9Data2Fragment"
+            app:destination="@id/page9Data2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page9Data2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page9Data2Fragment"
+        android:label="Page9Data2Fragment"
+        tools:layout="@layout/fragment_page9_data2"
+        >
+        <action
+            android:id="@+id/action_page9Data2Fragment_to_page10Data2Fragment"
+            app:destination="@id/page10Data2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/page10Data2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.Page10Data2Fragment"
+        android:label="Page10Data2Fragment"
+        tools:layout="@layout/fragment_page10_data2"
+        >
+        <action
+            android:id="@+id/action_page10Data2Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+        <action
+            android:id="@+id/action_page10Data2Fragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.login.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/part2Page1Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.Part2Page1Fragment"
+        android:label="Part2Page1Fragment" >
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_weightFragment"
+            app:destination="@id/weightFragment" />
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_menuDayPart2Fragment"
+            app:destination="@id/menuDayPart2Fragment" />
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_part2Fragment1ToUser"
+            app:destination="@id/part2Fragment1ToUser" />
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_part2Page2Fragment"
+            app:destination="@id/part2Page2Fragment" />
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_part2Page3Fragment"
+            app:destination="@id/part2Page3Fragment" />
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_part2Page4Fragment"
+            app:destination="@id/part2Page4Fragment" />
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_part2Page5Fragment"
+            app:destination="@id/part2Page5Fragment" />
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_part2Page6Fragment"
+            app:destination="@id/part2Page6Fragment" />
+        <action
+            android:id="@+id/action_part2Page1Fragment_to_part2Page7Fragment"
+            app:destination="@id/part2Page7Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weightFragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.WeightFragment"
+        android:label="fragment_weight"
+        tools:layout="@layout/fragment_weight" >
+        <action
+            android:id="@+id/action_weightFragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuDayPart2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.MenuDayPart2Fragment"
+        android:label="fragment_menu_day_part2"
+        tools:layout="@layout/fragment_menu_day_part2" >
+        <action
+            android:id="@+id/action_menuDayPart2Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+        <action
+            android:id="@+id/action_menuDayPart2Fragment_to_newOneMenuDayFragment"
+            app:destination="@id/newOneMenuDayFragment" />
+        <action
+            android:id="@+id/action_menuDayPart2Fragment_to_part2Page2Fragment"
+            app:destination="@id/part2Page2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newOneMenuDayFragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.NewOneMenuDayFragment"
+        android:label="NewOneMenuDayFragment" >
+        <action
+            android:id="@+id/action_newOneMenuDayFragment_to_menuDayPart2Fragment"
+            app:destination="@id/menuDayPart2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/part2Fragment1ToUser"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.Part2Fragment1ToUser"
+        android:label="Part2Fragment1ToUser" >
+        <action
+            android:id="@+id/action_part2Fragment1ToUser_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/part2Page2Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.Part2Page2Fragment"
+        android:label="fragment_part2_page2"
+        tools:layout="@layout/fragment_part2_page2" >
+        <action
+            android:id="@+id/action_part2Page2Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/part2Page3Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.Part2Page3Fragment"
+        android:label="fragment_part2_page3"
+        tools:layout="@layout/fragment_part2_page3" >
+        <action
+            android:id="@+id/action_part2Page3Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/part2Page4Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.Part2Page4Fragment"
+        android:label="fragment_part2_page4"
+        tools:layout="@layout/fragment_part2_page4" >
+        <action
+            android:id="@+id/action_part2Page4Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/part2Page5Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.Part2Page5Fragment"
+        android:label="fragment_part2_page5"
+        tools:layout="@layout/fragment_part2_page5" >
+        <action
+            android:id="@+id/action_part2Page5Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/part2Page6Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.Part2Page6Fragment"
+        android:label="fragment_part2_page6"
+        tools:layout="@layout/fragment_part2_page6" >
+        <action
+            android:id="@+id/action_part2Page6Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/part2Page7Fragment"
+        android:name="com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2.Part2Page7Fragment"
+        android:label="fragment_part2_page7"
+        tools:layout="@layout/fragment_part2_page7" >
+        <action
+            android:id="@+id/action_part2Page7Fragment_to_part2Page1Fragment"
+            app:destination="@id/part2Page1Fragment" />
+    </fragment>
+</navigation>
