@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "763427332270",
+    "project_id": "finnesretrofitmvvm-bc674",
+    "storage_bucket": "finnesretrofitmvvm-bc674.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763427332270:android:b89ca2891b322cfc7dcd3f",
+        "android_client_info": {
+          "package_name": "com.bignerdranch.android.finnesretrofitmvvm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763427332270-oo7mofmf3s6le0gglju1duj9l2imeo49.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bignerdranch.android.finnesretrofitmvvm",
+            "certificate_hash": "49a3d95e26639605d99063fec2c311955988fe5f"
+          }
+        },
+        {
+          "client_id": "763427332270-b7pggjtpg34u2d5jtce2kv4nkig09egs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDds1yQk0hpElEXk1l_KYOkvN_yxwBA3UI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763427332270-b7pggjtpg34u2d5jtce2kv4nkig09egs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
