@@ -27,15 +27,15 @@
             android:id="@+id/lin_lay1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.03">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:scaleX="1.2"
@@ -61,16 +61,16 @@
             android:textColor="@color/red_text"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="1sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pick_page_4_image"
-            app:layout_constraintVertical_bias="0.005" />
+            />
 
         <TextView
             android:id="@+id/text_up_page3"
             android:text="Выберите пункты, котрые Вам больше всего\nподходят"
-            app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_enter_data_page4"
@@ -80,13 +80,11 @@
 
 
         <TextView
-            android:clickable="true"
-
             android:id="@+id/page4_button_min_activ"
             android:text="Минимальная физическая активность"
             android:src="@{vmod.dataPage4.minimalPhysicalActive ? imgLoad.imageResourceNoPress: imgLoad.imageResource}"
             app:layout_constraintTop_toBottomOf="@+id/text_up_page3"
-            style="@style/data_text_page4"
+            style="@style/text_data_page4"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -94,7 +92,7 @@
             android:text="Я часто хожу пешком"
             android:src="@{vmod.dataPage4.fastWalkOnFoot ? imgLoad.imageResPage4: imgLoad.imageResPage4NoPress}"
             app:layout_constraintTop_toBottomOf="@+id/page4_button_min_activ"
-            style="@style/data_text_page4"
+            style="@style/text_data_page4"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -102,7 +100,7 @@
             android:text="Я занимаюсь 1 - 2 раза в неделю"
             app:layout_constraintTop_toBottomOf="@+id/page4_button_fast_walk"
             android:src="@{vmod.dataPage4.examine1_2TimesWeek ? imgLoad.imageResPage4: imgLoad.imageResPage4NoPress}"
-            style="@style/data_text_page4"
+            style="@style/text_data_page4"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -110,7 +108,7 @@
             android:text="Я занимаюсь 3 - 5 раз в неделю"
             android:src="@{vmod.dataPage4.examine3_5TimesWeek ? imgLoad.imageResPage4: imgLoad.imageResPage4NoPress}"
             app:layout_constraintTop_toBottomOf="@+id/page4_button_1_2_per_week"
-            style="@style/data_text_page4"
+            style="@style/text_data_page4"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -118,7 +116,7 @@
             android:text="Каждый день посещаю фитнес клуб"
             android:src="@{vmod.dataPage4.everyDayFitness ? imgLoad.imageResPage4: imgLoad.imageResPage4NoPress}"
             app:layout_constraintTop_toBottomOf="@+id/page4_button_3_5_per_week"
-            style="@style/data_text_page4"
+            style="@style/text_data_page4"
             tools:ignore="MissingConstraints" />
 
 
@@ -126,33 +124,33 @@
 
         <ImageView
             android:id="@+id/pick_page_4_image"
-            android:layout_width="282dp"
-            android:layout_height="264dp"
+            android:layout_width="220dp"
+            android:layout_height="206dp"
             android:scaleX="1"
             android:scaleY="1"
             android:src="@drawable/pict_page4"
 
-            app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lin_lay1"
             app:layout_constraintVertical_bias="0.0" />
 
+
         <LinearLayout
             android:id="@+id/lin_bottom"
             android:layout_width="238dp"
-            android:layout_height="40dp"
+            android:layout_height="@dimen/hight_40dp"
+            android:layout_marginBottom="60sp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/page4_button_every_day_fitness"
-            app:layout_constraintVertical_bias="0.15">
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageButton
                 android:id="@+id/text_back"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="@dimen/hight_40dp"
+                android:layout_height="@dimen/hight_40dp"
                 android:background="@drawable/ic_button_previos" />
 
             <TextView
@@ -174,23 +172,26 @@
                 />
         </LinearLayout>
 
+
         <LinearLayout
             android:id="@+id/lin_footer_image"
-            android:layout_width="@dimen/width_enter_data"
+            android:layout_width="318dp"
             android:layout_height="@dimen/hight_40dp"
+            android:layout_marginBottom="10sp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lin_bottom"
-            app:layout_constraintVertical_bias="0.5">
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageButton
                 android:id="@+id/footer_image"
-                android:layout_width="@dimen/width_enter_data"
+                android:layout_width="318dp"
                 android:layout_height="@dimen/hight_40dp"
+
+
                 android:background="@drawable/footer_image" />
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 

@@ -79,7 +79,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:text="Пью негазированную воду"
         android:src="@{vmPage8.dataPage8.waterWithoutGas ? imgLoadPage8.imageResPage5: imgLoadPage8.imageResPage5NoPress}"
         app:layout_constraintTop_toBottomOf="@+id/text_up_page3"
-        style="@style/data_text_page4"
+        style="@style/text_data_page4"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -87,7 +87,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:text="Часто пью сладкие газировки"
         android:src="@{vmPage8.dataPage8.waterSugarGas ? imgLoadPage8.imageResPage5: imgLoadPage8.imageResPage5NoPress}"
         app:layout_constraintTop_toBottomOf="@+id/page8_button_water_without_gas"
-        style="@style/data_text_page4"
+        style="@style/text_data_page4"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -95,7 +95,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:text="Пью много кофе"
         android:src="@{vmPage8.dataPage8.coffee ? imgLoadPage8.imageResPage5: imgLoadPage8.imageResPage5NoPress}"
         app:layout_constraintTop_toBottomOf="@+id/page8_button_water_shugar"
-        style="@style/data_text_page4"
+        style="@style/text_data_page4"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -103,7 +103,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:text="Пью только чай"
         android:src="@{vmPage8.dataPage8.tea ? imgLoadPage8.imageResPage5: imgLoadPage8.imageResPage5NoPress}"
         app:layout_constraintTop_toBottomOf="@+id/page8_button_more_cofee"
-        style="@style/data_text_page4"
+        style="@style/text_data_page4"
         tools:ignore="MissingConstraints" />
 
 

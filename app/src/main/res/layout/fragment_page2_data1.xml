@@ -16,12 +16,12 @@
             android:id="@+id/lin_lay1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+
             android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.05">
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -32,36 +32,22 @@
                 android:src="@drawable/ic_logo" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginTop="30dp"
-                android:layout_weight="1"
-                android:background="@drawable/ic_fon_text_up"
-                android:fontFamily="@font/roboto_condensed_regular"
-                android:paddingTop="2dp"
-                android:text="Мы расскажем тебе:"
-                android:textAlignment="center"
-                android:textColor="@color/color_text_up_black"
-                android:textSize="20sp"
-                android:textStyle="bold"
 
-                />
+                android:text="Мы расскажем тебе:"
+                style="@style/up_grin_text" />
         </LinearLayout>
 
         <ImageView
             android:id="@+id/pic_page2_image"
             android:layout_width="287dp"
             android:layout_height="264dp"
+            android:layout_marginTop="130sp"
+
             android:src="@drawable/pict_page_2"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.28" />
-
-
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
@@ -87,9 +73,9 @@
 
         <TextView
             android:id="@+id/text_princip_pitania"
+            style="@style/text_page2"
             android:text="Принципы правильного питания"
             app:layout_constraintTop_toBottomOf="@id/pic_page2_image"
-            style="@style/text_page2"
             tools:ignore="MissingConstraints" />
 
 
@@ -168,12 +154,11 @@
             android:id="@+id/lin_bottom"
             android:layout_width="238dp"
             android:layout_height="@dimen/hight_40dp"
+            android:layout_marginBottom="60sp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_individual_menu"
-            app:layout_constraintVertical_bias="0.2">
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageButton
                 android:id="@+id/text_back"
@@ -205,12 +190,11 @@
             android:id="@+id/lin_footer_image"
             android:layout_width="318dp"
             android:layout_height="@dimen/hight_40dp"
+            android:layout_marginBottom="10sp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lin_bottom"
-            app:layout_constraintVertical_bias="0.35">
+            app:layout_constraintStart_toStartOf="parent">
 
             <ImageButton
                 android:id="@+id/footer_image"

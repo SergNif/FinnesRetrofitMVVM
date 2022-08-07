@@ -77,7 +77,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:text="Работаю в офисе"
         android:src="@{vmPage9.dataPage9.workOffice ? imgLoadPage9.imageResPage5: imgLoadPage9.imageResPage5NoPress}"
         app:layout_constraintTop_toBottomOf="@+id/text_up_page3"
-        style="@style/data_text_page4"
+        style="@style/text_data_page4"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -85,7 +85,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:text="Регулярно нахожусь в разъездах"
         android:src="@{vmPage9.dataPage9.regularTraffic ? imgLoadPage9.imageResPage5: imgLoadPage9.imageResPage5NoPress}"
         app:layout_constraintTop_toBottomOf="@+id/page9_work_office"
-        style="@style/data_text_page4"
+        style="@style/text_data_page4"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -93,7 +93,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:text="Большую часть дня провожу на ногах"
         android:src="@{vmPage9.dataPage9.onFoot ? imgLoadPage9.imageResPage5: imgLoadPage9.imageResPage5NoPress}"
         app:layout_constraintTop_toBottomOf="@+id/page9_in_travel"
-        style="@style/data_text_page4"
+        style="@style/text_data_page4"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -101,7 +101,7 @@ xmlns:tools="http://schemas.android.com/tools">
         android:text="Большую часть провожу дома"
         android:src="@{vmPage9.dataPage9.inHome ? imgLoadPage9.imageResPage5: imgLoadPage9.imageResPage5NoPress}"
         app:layout_constraintTop_toBottomOf="@+id/page9_day_foot"
-        style="@style/data_text_page4"
+        style="@style/text_data_page4"
         tools:ignore="MissingConstraints" />
 
 
