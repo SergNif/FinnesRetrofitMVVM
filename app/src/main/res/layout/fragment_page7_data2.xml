@@ -26,12 +26,12 @@ xmlns:tools="http://schemas.android.com/tools">
         android:id="@+id/lin_lay1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -45,6 +45,7 @@ xmlns:tools="http://schemas.android.com/tools">
 
             android:text="Полезно - значит вкусно"
             style="@style/up_grin_text"
+            android:textSize="14sp"
             />
     </LinearLayout>
 
@@ -66,7 +67,7 @@ xmlns:tools="http://schemas.android.com/tools">
     <TextView
         android:id="@+id/text_up_page3"
         android:text="Выберите продукты, которые Вы хотели бы\nдобавить в Ваш рацион питания"
-        app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_enter_data_page4"
@@ -155,18 +156,17 @@ xmlns:tools="http://schemas.android.com/tools">
     <LinearLayout
         android:id="@+id/lin_bottom"
         android:layout_width="238dp"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/hight_40dp"
+        android:layout_marginBottom="60sp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lin_lay1_vertcal"
-        app:layout_constraintVertical_bias="0.15">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/text_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/hight_40dp"
+            android:layout_height="@dimen/hight_40dp"
             android:background="@drawable/ic_button_previos" />
 
         <TextView
@@ -188,28 +188,30 @@ xmlns:tools="http://schemas.android.com/tools">
             />
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/lin_footer_image"
-        android:layout_width="@dimen/width_enter_data"
+        android:layout_width="318dp"
         android:layout_height="@dimen/hight_40dp"
+        android:layout_marginBottom="10sp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lin_bottom"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/footer_image"
-            android:layout_width="@dimen/width_enter_data"
+            android:layout_width="318dp"
             android:layout_height="@dimen/hight_40dp"
+
+
             android:background="@drawable/footer_image" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/pick_page_4_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220sp"
+        android:layout_height="206sp"
         android:scaleX="0.9"
         android:scaleY="0.9"
         android:src="@drawable/pict_page_7"
@@ -217,7 +219,7 @@ xmlns:tools="http://schemas.android.com/tools">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lin_lay1"
-        app:layout_constraintVertical_bias="0.02"
+        app:layout_constraintVertical_bias="0.0"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
