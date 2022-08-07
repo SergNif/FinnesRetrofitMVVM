@@ -20,17 +20,16 @@ xmlns:tools="http://schemas.android.com/tools">
 
 
     <!-- TODO: Update blank fragment layout -->
-
     <LinearLayout
         android:id="@+id/lin_lay1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:layout_marginHorizontal="15sp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -43,6 +42,8 @@ xmlns:tools="http://schemas.android.com/tools">
         <TextView
             android:text="Будь лучше каждый день"
             style="@style/up_grin_text"
+            android:textSize="15sp"
+            android:paddingHorizontal="2sp"
             />
     </LinearLayout>
 
@@ -108,13 +109,12 @@ xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
         android:id="@+id/pick_page_4_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="220dp"
+        android:layout_height="206dp"
         android:scaleX="1"
         android:scaleY="1"
         android:src="@drawable/pic_page_9"
 
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lin_lay1"
@@ -123,18 +123,17 @@ xmlns:tools="http://schemas.android.com/tools">
     <LinearLayout
         android:id="@+id/lin_bottom"
         android:layout_width="238dp"
-        android:layout_height="40dp"
+        android:layout_height="@dimen/hight_40dp"
+        android:layout_marginBottom="60sp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/page9_in_house"
-        app:layout_constraintVertical_bias="0.15">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/text_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/hight_40dp"
+            android:layout_height="@dimen/hight_40dp"
             android:background="@drawable/ic_button_previos" />
 
         <TextView
@@ -156,25 +155,25 @@ xmlns:tools="http://schemas.android.com/tools">
             />
     </LinearLayout>
 
+
     <LinearLayout
         android:id="@+id/lin_footer_image"
-        android:layout_width="@dimen/width_enter_data"
+        android:layout_width="318dp"
         android:layout_height="@dimen/hight_40dp"
+        android:layout_marginBottom="10sp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/lin_bottom"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageButton
             android:id="@+id/footer_image"
-            android:layout_width="@dimen/width_enter_data"
+            android:layout_width="318dp"
             android:layout_height="@dimen/hight_40dp"
+
+
             android:background="@drawable/footer_image" />
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
 

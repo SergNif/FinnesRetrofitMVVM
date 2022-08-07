@@ -93,7 +93,7 @@ android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="3sp"
+                android:paddingTop="8sp"
 
                 app:layout_constraintStart_toStartOf="@id/parametrs"
                 app:layout_constraintTop_toBottomOf="@+id/lin_lay1">

@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingVertical="15sp"
+            android:paddingVertical="8sp"
 
             app:layout_constraintEnd_toEndOf="@id/part2page1_button_history_weight"
 
@@ -88,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="15sp"
+            android:paddingTop="5sp"
             android:paddingHorizontal="10sp"
 
             app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +111,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/open_sans"
                     android:gravity="center"
-                    android:paddingBottom="5sp"
+                    android:paddingBottom="3sp"
                     android:text="У тебя все получится!"
                     android:textColor="#898989"
                     android:textSize="14sp"
@@ -125,7 +125,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/open_sans"
                     android:gravity="center"
-                    android:paddingBottom="8sp"
+                    android:paddingBottom="3sp"
                     android:text="@{`c `+ vmod.startData +' '+`по`+' '+ vmod.endData}"
                     android:textColor="#898989"
                     android:textSize="14sp"
@@ -156,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/open_sans"
                 android:gravity="center"
-                android:paddingBottom="12sp"
+                android:paddingBottom="5sp"
                 android:text="@{`ID:` + frag.recivedUserFromSharedPreferences.id}"
                 android:textColor="#898989"
                 app:layout_constraintEnd_toEndOf="@+id/parametrs"
@@ -170,8 +170,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingTop="15sp"
-            android:paddingHorizontal="10sp"
+            android:paddingTop="5sp"
+            android:paddingHorizontal="5sp"
 
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -209,8 +209,8 @@
             <TextView
                 android:id="@+id/part2page1_button_weight"
                 android:layout_width="wrap_content"
-                android:paddingHorizontal="6sp"
-                android:layout_height="@dimen/hight_40dp"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="4sp"
                 android:background="@drawable/ic_fon_parametrs"
                 android:clickable="true"
                 android:gravity="center"
@@ -240,7 +240,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans"
             android:gravity="center"
-            android:paddingVertical="12sp"
+            android:paddingVertical="6sp"
             android:text="Настройки"
 
 
@@ -257,7 +257,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/open_sans"
             android:gravity="center"
-
+android:paddingVertical="2sp"
+            android:layout_marginStart="30dp"
             android:text="Изменить имя"
             android:textColor="#3C3C43"
             android:textSize="14sp"
@@ -268,9 +269,9 @@
         <EditText
             android:id="@+id/part2page1_button_exampl_menu_week"
 
-            style="@style/data_text_part2_page4"
+            style="@style/e"
             android:clickable="true"
-            android:hint="MMMM"
+            android:hint=""
             android:paddingStart="12sp"
             android:text="@={vmod._user.fullName}"
             android:textAlignment="viewStart"
@@ -287,6 +288,7 @@
 
             android:fontFamily="@font/open_sans"
             android:gravity="center"
+            android:layout_marginStart="30dp"
             android:text="Сменить пароль"
             android:textColor="#3C3C43"
             android:textSize="14sp"
@@ -299,7 +301,7 @@
             android:id="@+id/lyn_old_password"
             android:layout_width="match_parent"
             android:layout_height="44dp"
-            android:layout_marginStart="30dp"
+
             android:layout_marginTop="12sp"
             android:gravity="center_vertical"
             android:orientation="horizontal"

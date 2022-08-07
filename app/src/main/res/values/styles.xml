@@ -127,9 +127,11 @@
     <style name="fon_menu_button_part2_to_user">
         <item name="android:paddingStart">15sp</item>
         <item name="android:paddingEnd">15sp</item>
+        <item name="android:paddingVertical">1sp</item>
         <item name="android:layout_marginBottom">10sp</item>
         <item name="android:layout_width">320dp</item>
-        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_height">38dp</item>
+
         <item name="android:background">@drawable/ic_fon_menu_button_part2_page1</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
         <item name="android:gravity">center</item>
@@ -196,7 +198,7 @@
 
 
     <style name="text_data_page4">
-        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_width">295sp</item>
         <item name="android:layout_height">35sp</item>
         <item name="android:background">@drawable/ic_fon_text_page_4_no_press</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
