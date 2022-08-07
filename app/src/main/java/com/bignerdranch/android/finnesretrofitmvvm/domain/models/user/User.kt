@@ -10,21 +10,22 @@ data class User (
     var fullName: String? = null,
     var email: String? = null,
     var password: String? = null,
+    var fitness_id: Int? = null,
 )
-{
-    var fitness_id: Int by DelegateClass()
-
-    class DelegateClass : ReadWriteProperty<User, Int> {
-        override fun getValue(thisRef: User, property: KProperty<*>): Int {
-            var df = "iin"
-            return 20
-        }
-
-        override fun setValue(thisRef: User, property: KProperty<*>, value: Int) {
-            var df = "iin"
-
-        }
-
-    }
-}
+//{
+//    var fitness_id: Int by DelegateClass()
+//
+//    class DelegateClass : ReadWriteProperty<User, Int> {
+//        override fun getValue(thisRef: User, property: KProperty<*>): Int {
+//            var df = "iin"
+//            return 20
+//        }
+//
+//        override fun setValue(thisRef: User, property: KProperty<*>, value: Int) {
+//            var df = "iin"
+//
+//        }
+//
+//    }
+//}
 

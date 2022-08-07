@@ -208,7 +208,7 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
         } else {
             userName.password = newPassword
         }
-        userName.fitness_id = _user.id!!
+//        userName.fitness_id = getIdFromSharedPreferenses()
         launchUpdateNamePassword(userName)
 
     }
@@ -231,8 +231,8 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
 
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 if (response.isSuccessful) {
-                    Log.e(TAG, "Data Page3 IS ${response.body()}")
                     _user = response.body()!!
+                    Log.e(TAG, "Data Page3 IS ${response.body()} ${_user}")
                     createNewUserLiveData.postValue(response.body())
                     _user.id?.let {
                         _user.fullName?.let { it1 ->

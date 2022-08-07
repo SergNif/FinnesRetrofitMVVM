@@ -130,7 +130,7 @@
         <item name="android:paddingVertical">1sp</item>
         <item name="android:layout_marginBottom">10sp</item>
         <item name="android:layout_width">320dp</item>
-        <item name="android:layout_height">38dp</item>
+        <item name="android:layout_height">34dp</item>
 
         <item name="android:background">@drawable/ic_fon_menu_button_part2_page1</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
@@ -146,7 +146,7 @@
     <style name="data_text_part2_page4">
         <item name="android:paddingEnd">5sp</item>
         <item name="android:paddingVertical">1sp</item>
-        <item name="android:layout_marginVertical">10sp</item>
+        <item name="android:layout_marginVertical">5sp</item>
         <item name="android:layout_width">320dp</item>
         <item name="android:layout_height">32dp</item>
         <item name="android:drawableRight">@drawable/ic_icons_16_calendar_vector_right</item>
@@ -181,9 +181,9 @@
 
     <style name="part2_page1_to_user">
         <item name="android:paddingEnd">15sp</item>
-        <item name="android:layout_marginVertical">18sp</item>
+        <item name="android:layout_marginVertical">6sp</item>
         <item name="android:layout_width">320dp</item>
-        <item name="android:layout_height">34dp</item>
+        <item name="android:layout_height">35dp</item>
 
         <item name="android:background">@drawable/ic_fon_part2_save_param</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
