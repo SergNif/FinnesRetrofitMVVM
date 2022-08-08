@@ -32,7 +32,7 @@
             android:orientation="horizontal"
             android:paddingVertical="8sp"
 
-            app:layout_constraintEnd_toEndOf="@id/part2page1_button_history_weight"
+            app:layout_constraintEnd_toEndOf="@id/lyn_weight_history"
 
             app:layout_constraintTop_toTopOf="parent">
 
@@ -216,14 +216,49 @@
                 app:layout_constraintEnd_toEndOf="@+id/part2page1_button_history_weight" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/part2page1_button_history_weight"
-            style="@style/fon_menu_button_part2"
-            android:clickable="true"
-            android:text="История изенения веса"
-            android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@+id/parametrs"
-            tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:id="@+id/lyn_weight_history"
+            android:layout_width="320sp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:orientation="horizontal"
+            android:paddingHorizontal="5sp"
+            android:paddingTop="8sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parametrs">
+
+            <TextView
+                android:id="@+id/part2page1_button_history_graph"
+                style="@style/fon_menu_button_part2_sign_left"
+
+                android:clickable="true"
+                android:text=""
+                android:textSize="16sp"
+
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/part2page1_button_history_weight"
+                style="@style/fon_menu_button_part2"
+                android:clickable="true"
+
+                android:text="История изенения веса"
+                android:textSize="16sp"
+
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/part2page1_button_history_data"
+                style="@style/fon_menu_button_part2_sign_Right"
+
+                android:clickable="true"
+                android:text=""
+                android:textSize="16sp"
+
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/parametrs_buttons_chart"
@@ -232,9 +267,9 @@
             android:orientation="vertical"
             android:paddingTop="5sp"
 
-            app:layout_constraintEnd_toEndOf="@+id/part2page1_button_history_weight"
-            app:layout_constraintStart_toStartOf="@+id/part2page1_button_history_weight"
-            app:layout_constraintTop_toBottomOf="@+id/part2page1_button_history_weight">
+            app:layout_constraintEnd_toEndOf="@+id/lyn_weight_history"
+            app:layout_constraintStart_toStartOf="@+id/lyn_weight_history"
+            app:layout_constraintTop_toBottomOf="@+id/lyn_weight_history">
 
             <TextView
                 android:id="@+id/part2page1_button_programm_pp"
@@ -242,7 +277,7 @@
                 android:clickable="true"
                 android:onClick="@{frag::onClickProgrammPitan}"
                 android:text="Программа питания ПП"
-                app:layout_constraintTop_toBottomOf="@+id/part2page1_button_history_weight"
+                app:layout_constraintTop_toBottomOf="@+id/lyn_weight_history"
                 tools:ignore="MissingConstraints" />
 
             <TextView
@@ -295,9 +330,9 @@
             android:orientation="vertical"
             android:paddingTop="5sp"
 
-            app:layout_constraintEnd_toEndOf="@+id/part2page1_button_history_weight"
-            app:layout_constraintStart_toStartOf="@+id/part2page1_button_history_weight"
-            app:layout_constraintTop_toBottomOf="@+id/part2page1_button_history_weight">
+            app:layout_constraintEnd_toEndOf="@+id/lyn_weight_history"
+            app:layout_constraintStart_toStartOf="@+id/lyn_weight_history"
+            app:layout_constraintTop_toBottomOf="@+id/lyn_weight_history">
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/day_chart"

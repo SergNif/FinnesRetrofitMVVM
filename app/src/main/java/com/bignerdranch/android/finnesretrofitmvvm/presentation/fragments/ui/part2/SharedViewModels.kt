@@ -66,8 +66,9 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
     val fullName: LiveData<String> = _fullName
     private var _email: MutableLiveData<String> = MutableLiveData("f@f.rt")
     val email: LiveData<String> = _email
-    private var _passwordFB: MutableLiveData<String> = MutableLiveData("pasw")
-    val passwordFB: LiveData<String> = _passwordFB
+    private var _password: MutableLiveData<String> = MutableLiveData("pasw")
+    val password: LiveData<String> = _password
+
 
     var newPasswordFB: String = ""
 
@@ -202,18 +203,20 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
         return result
     }
 
-    fun saveChangeNamePassword(newPassword: String) {
+    fun saveChangeNamePassword(newPassword: String?) {
         val userName: User = getUserNameUseCase.execute()
 
         userName.fullName = _user.fullName
-        if( (newPassword == "") or (newPassword == null) ){
-            userName.password = _user.password
-        } else {
-            userName.password = newPassword
-        }
-//        userName.fitness_id = getIdFromSharedPreferenses()
-        launchUpdateNamePassword(userName)
+        userName.password = _user.password
 
+        if (newPassword != null) {
+            userName.password = if ( newPassword != "null" && newPassword.isNotEmpty()) newPassword else userName.password
+        }else{
+            userName.password = userName.password
+        }
+        _user.password = userName.password
+
+        launchUpdateNamePassword(userName)
     }
 
     fun launchUpdateNamePassword(userName: User) = viewModelScope.launch {
@@ -263,7 +266,7 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
         _id.value = _user.id
         _fullName.value = _user.fullName
         _email.value = _user.email
-        _passwordFB.value = _user.password
+        _password.value = _user.password
         _fitness_id.value = _user.fitness_id
     }
 
@@ -390,9 +393,11 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
         try {
             _startDataAPI.value = LocalDate.parse(startData.value, formatter2).toString()
             _endDataAPI.value = LocalDate.parse(endData.value, formatter2).toString()
-        }catch(e: DateTimeParseException) {
-            _startDataAPI.value = LocalDate.parse(startData.value.toString()).toString()//, DateTimeFormatter.ofPattern("yyyy-MM-dd")).toString()
-            _endDataAPI.value = LocalDate.parse(endData.value.toString()).toString()//, DateTimeFormatter.ofPattern("yyyy-MM-dd")).toString()
+        } catch (e: DateTimeParseException) {
+            _startDataAPI.value = LocalDate.parse(startData.value.toString())
+                .toString()//, DateTimeFormatter.ofPattern("yyyy-MM-dd")).toString()
+            _endDataAPI.value = LocalDate.parse(endData.value.toString())
+                .toString()//, DateTimeFormatter.ofPattern("yyyy-MM-dd")).toString()
         }
 
     }

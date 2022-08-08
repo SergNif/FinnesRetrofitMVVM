@@ -147,7 +147,7 @@ class Part2Page1Fragment() : Fragment() {
             .setSelection(Pair(MaterialDatePicker.thisMonthInUtcMilliseconds(),
                 MaterialDatePicker.todayInUtcMilliseconds()))
             .build()
-        dateRangePicker.addOnPositiveButtonClickListener {
+        dateRangePicker.addOnPositiveButtonClickListener { it ->
             sharedViewModels.formatDataPicker(it)
             sharedViewModels.formatDataPickerAPI(it)
             Log.e(TAG,
@@ -185,7 +185,7 @@ class Part2Page1Fragment() : Fragment() {
                 Snackbar.LENGTH_LONG).show()
         }
 
-        dateRangePicker.show(getParentFragmentManager(), "Data Picker")
+        dateRangePicker.show(parentFragmentManager, "Data Picker")
     }
 
     private fun backToFragment() {
@@ -215,7 +215,7 @@ class Part2Page1Fragment() : Fragment() {
                 "No date is selected",
                 Snackbar.LENGTH_LONG).show()
         }
-        picker.show(getParentFragmentManager(), "Data Picker")
+        picker.show(parentFragmentManager, "Data Picker")
 //        picker.show(supportFragmentManager, "Date Picker")
     }
 

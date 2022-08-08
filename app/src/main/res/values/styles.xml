@@ -109,11 +109,11 @@
         <item name="android:paddingEnd">2sp</item>
         <item name="android:paddingVertical">1sp</item>
         <item name="android:layout_marginBottom">5sp</item>
-        <item name="android:drawableLeft">@drawable/ic_icons_16_calendar_vector</item>
-        <item name="android:drawableRight">@drawable/ic_icons_24_left_bar_calendar</item>
-        <item name="android:layout_width">320dp</item>
+<!--        <item name="android:drawableLeft">@drawable/ic_icons_16_calendar_vector</item>-->
+<!--        <item name="android:drawableRight">@drawable/ic_icons_24_left_bar_calendar</item>-->
+        <item name="android:layout_width">180sp</item>
         <item name="android:layout_height">34dp</item>
-        <item name="android:background">@drawable/ic_fon_menu_button_part2_page1</item>
+        <item name="android:background">@drawable/ic_fon_menu_button_part2_page1_middle</item>
         <item name="android:fontFamily">@font/roboto_condensed_regular</item>
         <item name="android:gravity">center</item>
         <item name="android:textColor">@color/text_grey_page4</item>
@@ -123,6 +123,48 @@
         <item name="layout_constraintStart_toStartOf">parent</item>
         <item name="layout_constraintVertical_bias">0.03</item>
     </style>
+
+    <style name="fon_menu_button_part2_sign_left">
+        <item name="android:paddingStart">2sp</item>
+        <item name="android:paddingEnd">2sp</item>
+        <item name="android:paddingVertical">1sp</item>
+        <item name="android:layout_marginBottom">5sp</item>
+        <item name="android:drawableLeft">@drawable/ic_icons_16_calendar_vector</item>
+
+        <item name="android:layout_width">60sp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:background">@drawable/ic_fon_menu_button_part2_page1_left</item>
+        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
+        <item name="android:gravity">left</item>
+
+        <item name="android:textColor">@color/text_grey_page4</item>
+        <item name="android:textSize">15sp</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintVertical_bias">0.03</item>
+    </style>
+
+    <style name="fon_menu_button_part2_sign_Right">
+        <item name="android:paddingStart">2sp</item>
+        <item name="android:paddingEnd">2sp</item>
+        <item name="android:paddingVertical">1sp</item>
+        <item name="android:layout_marginBottom">5sp</item>
+
+        <item name="android:drawableRight">@drawable/ic_icons_24_left_bar_calendar</item>
+        <item name="android:layout_width">60sp</item>
+        <item name="android:layout_height">34dp</item>
+        <item name="android:background">@drawable/ic_fon_menu_button_part2_page1_right</item>
+        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/text_grey_page4</item>
+        <item name="android:textSize">15sp</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintVertical_bias">0.03</item>
+    </style>
+
 
     <style name="fon_menu_button_part2_to_user">
         <item name="android:paddingStart">15sp</item>
