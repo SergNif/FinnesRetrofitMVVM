@@ -1,6 +1,7 @@
 package com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.part2
 
 import android.os.Bundle
+import android.text.Editable
 import android.text.InputType
 import android.text.method.PasswordTransformationMethod
 import android.text.method.SingleLineTransformationMethod
@@ -93,14 +94,17 @@ class Part2Fragment1ToUser : Fragment() {
         binding.part2page1TextOldPassword.transformationMethod = PasswordTransformationMethod.getInstance()
         binding.part2page1TextNewPassword.transformationMethod = PasswordTransformationMethod.getInstance()
 
-
-
+        fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
         sharedViewModels.fullName.observe(viewLifecycleOwner, Observer { fullName ->
             binding.textNameUserPart2Page1.text = fullName.toString()
+
 //            com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ARG_AGE = age.toString()
         })
 
-
+        sharedViewModels.password.observe(viewLifecycleOwner, Observer { password ->
+            binding.part2page1TextOldPassword.text = password.toEditable()
+        //            com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ARG_AGE = age.toString()
+        })
     }
 
 
@@ -136,5 +140,7 @@ class Part2Fragment1ToUser : Fragment() {
     fun onClickSaveChange(view: View) {
         sharedViewModels.saveChangeNamePassword(binding.newPsw.toString())
     }
+
+
 }
 

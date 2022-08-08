@@ -169,7 +169,7 @@ class Page3Data2Fragment : Fragment() {
         fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
         viewModel.liveAgeDataPage3.observe(viewLifecycleOwner, Observer { age ->
-            binding.dataHeartAgePage3.setText(age.toEditable())
+            binding.dataHeartAgePage3.text = age.toEditable()
             ARG_AGE = age.toString()
         })
         viewModel.liveHeightDataPage3.observe(viewLifecycleOwner, Observer { hight ->
