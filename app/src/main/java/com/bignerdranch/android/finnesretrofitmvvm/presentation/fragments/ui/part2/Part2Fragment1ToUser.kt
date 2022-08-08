@@ -22,7 +22,6 @@ import com.bignerdranch.android.finnesretrofitmvvm.domain.models.user.User
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 private lateinit var newPassword: String
-
 /**
  * A simple [Fragment] subclass.
  * Use the [Part2Fragment1ToUser.newInstance] factory method to
@@ -66,6 +65,7 @@ class Part2Fragment1ToUser : Fragment() {
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
          * @return A new instance of fragment Part2Fragment1ToUser.
+         * text_name_user_part2_page1
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
@@ -94,7 +94,16 @@ class Part2Fragment1ToUser : Fragment() {
         binding.part2page1TextNewPassword.transformationMethod = PasswordTransformationMethod.getInstance()
 
 
+
+        sharedViewModels.fullName.observe(viewLifecycleOwner, Observer { fullName ->
+            binding.textNameUserPart2Page1.text = fullName.toString()
+//            com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ARG_AGE = age.toString()
+        })
+
+
     }
+
+
 
     fun onClickHouse(view: View) {
         findNavController().popBackStack()
@@ -128,3 +137,4 @@ class Part2Fragment1ToUser : Fragment() {
         sharedViewModels.saveChangeNamePassword(binding.newPsw.toString())
     }
 }
+

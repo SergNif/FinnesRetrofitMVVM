@@ -2,6 +2,7 @@ package com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.pa
 
 import android.annotation.SuppressLint
 import android.app.Application
+import android.service.autofill.Validators.or
 import android.util.Log
 import androidx.core.util.Pair
 import androidx.lifecycle.AndroidViewModel
@@ -82,6 +83,8 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
     val date: LiveData<String> = _date
     private var _fitness_id: MutableLiveData<Int> = MutableLiveData(0)
     val fitness_id: LiveData<Int> = _fitness_id
+    private var _fullNameUser: MutableLiveData<String> = MutableLiveData("")
+    var fullNameUser: LiveData<String> = _fullNameUser
 
 
     private var _startData: MutableLiveData<String> =
@@ -203,7 +206,7 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
         val userName: User = getUserNameUseCase.execute()
 
         userName.fullName = _user.fullName
-        if (newPassword == "") {
+        if( (newPassword == "") or (newPassword == null) ){
             userName.password = _user.password
         } else {
             userName.password = newPassword
@@ -243,6 +246,7 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
                             }
                         }
                     }
+//                    fullNameUser = _user.fullName
                     changeLiveParametrs(_user)
 //                    saveUserToSharedPreferens()
 
