@@ -21,6 +21,7 @@ import com.bignerdranch.android.finnesretrofitmvvm.domain.models.user.User
 import com.github.mikephil.charting.data.LineData
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.snackbar.Snackbar
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.properties.Delegates
 
@@ -78,8 +79,11 @@ class Part2Page1Fragment() : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
+
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_part2_page1, container, false)
+
     }
 
     companion object {
@@ -123,7 +127,8 @@ class Part2Page1Fragment() : Fragment() {
 
 //Log.e(TAG, MyVariable.Singleton.publicData?.age.toString())
         backToFragment()
-
+        binding.lynDatePicker.isVisible = false
+        binding.inputWeight.isVisible = false
 
         binding.part2page1ButtonHistoryWeight.setOnClickListener {
 //            showDatePickerDialog()
@@ -144,18 +149,43 @@ class Part2Page1Fragment() : Fragment() {
             findNavController().navigate(R.id.action_part2Page1Fragment_to_menuDayPart2Fragment)
         }
         val today = Calendar.getInstance()
-//        binding.datePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
-//            today.get(Calendar.DAY_OF_MONTH)
-//
-//        ) { view, year, month, day ->
-//            val month = month + 1
-//            val msg = "You Selected: $day/$month/$year"
-//            dmonth = month
-//            dday = day
-//            dyear = year
-//            sharedViewModels._data3.weight = new_weigt_today.toString()
-//            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
-//        }
+        binding.lynDatePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
+            today.get(Calendar.DAY_OF_MONTH)
+
+        ) { view, year, month, day ->
+            val month = month + 1
+            val msg = "You Selected: $day/$month/$year"
+            dmonth = month
+            dday = day
+            dyear = year
+            sharedViewModels._data3.weight = new_weigt_today.toString()
+            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+        }
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .setInputMode(MaterialDatePicker.INPUT_MODE_TEXT)
+                .build()
+
+        datePicker.show(parentFragmentManager, TAG)
+        datePicker.addOnPositiveButtonClickListener {
+            // formatting date in dd-mm-yyyy format.
+            val dateFormatter = SimpleDateFormat("dd-MM-yyyy")
+            val date = dateFormatter.format(Date(it))
+            Toast.makeText(context, "$date is selected", Toast.LENGTH_LONG).show()
+
+        }
+
+        // Setting up the event for when cancelled is clicked
+        datePicker.addOnNegativeButtonClickListener {
+            Toast.makeText(context, "${datePicker.headerText} is cancelled", Toast.LENGTH_LONG).show()
+        }
+
+        // Setting up the event for when back button is pressed
+        datePicker.addOnCancelListener {
+            Toast.makeText(context, "Date Picker Cancelled", Toast.LENGTH_LONG).show()
+        }
 
     }
 
@@ -168,6 +198,8 @@ class Part2Page1Fragment() : Fragment() {
                 .build()
 
         datePicker.show(parentFragmentManager, TAG)
+
+
     }
 
 
@@ -284,6 +316,7 @@ class Part2Page1Fragment() : Fragment() {
 
     fun onClickHistoryWeightDiagramm(view: View) {
         binding.lynDatePicker.isVisible = true
+        binding.inputWeight.isVisible = true
         binding.lynWeightHistory.isVisible = false
         binding.footerImage.isVisible = false
         binding.parametrsButtonsChart.isVisible = false

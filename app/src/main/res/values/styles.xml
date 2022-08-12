@@ -125,20 +125,24 @@
     </style>
 
 
-    <style name="Datapicker" parent="ThemeOverlay.AppCompat.Dialog">
+    <style name="Datapicker" parent="Theme.AppCompat.Light" >
         <!--header background-->
         <item name="colorAccent">#FFA8A7</item>
-        <!--selected day-->
-        <item name="android:colorControlActivated">#8D6BB2</item>
-        <item name="android:textColorPrimaryInverse">#AD6BB2</item>
+<!--        <item name="colorOnPrimary">#C5E0A6</item>-->
+        <item name="colorPrimary">#AD8AEB</item>
+<!--        <item name="android:windowBackground">#D8EDD9</item>-->
+<!--        &lt;!&ndash;selected day&ndash;&gt;-->
+        <item name="android:colorControlActivated">#7FAF80E3</item>
+        <item name="android:textColorPrimaryInverse">#2C3339</item>
 
         <item name="android:textSize">22sp</item>
-        <item name="android:autoSizeTextType"></item>
+        <item name="android:text">22sp</item>
 
+        <item name="cornerFamily">cut</item>
         <!--days of the month-->
-        <item name="android:textColorPrimary">#2F3F64</item>
+        <item name="android:textColorPrimary">#2196F3</item>
         <!--days of the week-->
-        <item name="android:textColorSecondary">#575B65</item>
+        <item name="android:textColorSecondary">#FAAFB2</item>
         <item name="android:headerBackground">#FF3365</item>
     </style>
 
