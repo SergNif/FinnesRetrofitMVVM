@@ -124,6 +124,24 @@
         <item name="layout_constraintVertical_bias">0.03</item>
     </style>
 
+
+    <style name="Datapicker" parent="ThemeOverlay.AppCompat.Dialog">
+        <!--header background-->
+        <item name="colorAccent">#FFA8A7</item>
+        <!--selected day-->
+        <item name="android:colorControlActivated">#8D6BB2</item>
+        <item name="android:textColorPrimaryInverse">#AD6BB2</item>
+
+        <item name="android:textSize">22sp</item>
+        <item name="android:autoSizeTextType"></item>
+
+        <!--days of the month-->
+        <item name="android:textColorPrimary">#2F3F64</item>
+        <!--days of the week-->
+        <item name="android:textColorSecondary">#575B65</item>
+        <item name="android:headerBackground">#FF3365</item>
+    </style>
+
     <style name="fon_menu_button_part2_sign_left">
         <item name="android:paddingStart">2sp</item>
         <item name="android:paddingEnd">2sp</item>

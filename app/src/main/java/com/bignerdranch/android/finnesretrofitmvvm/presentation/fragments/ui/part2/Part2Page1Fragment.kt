@@ -22,6 +22,7 @@ import com.github.mikephil.charting.data.LineData
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.snackbar.Snackbar
 import java.util.*
+import kotlin.properties.Delegates
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -39,6 +40,10 @@ private var ARG_WEIGHT = "param3"
 class Part2Page1Fragment() : Fragment() {
     // TODO: Rename and change types of parameters
     lateinit var materialDatePicker: MaterialDatePicker<*>
+    var dyear: Int = 0
+    var dmonth: Int = 0
+    var dday: Int = 0
+    var new_weigt_today: String = ""
 
     private var param1: String? = null
     private var param2: String? = null
@@ -138,7 +143,33 @@ class Part2Page1Fragment() : Fragment() {
         binding.noteButton.setOnClickListener {
             findNavController().navigate(R.id.action_part2Page1Fragment_to_menuDayPart2Fragment)
         }
+        val today = Calendar.getInstance()
+//        binding.datePicker.init(today.get(Calendar.YEAR), today.get(Calendar.MONTH),
+//            today.get(Calendar.DAY_OF_MONTH)
+//
+//        ) { view, year, month, day ->
+//            val month = month + 1
+//            val msg = "You Selected: $day/$month/$year"
+//            dmonth = month
+//            dday = day
+//            dyear = year
+//            sharedViewModels._data3.weight = new_weigt_today.toString()
+//            Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
+//        }
+
     }
+
+    private fun showSmallDatePicker() {
+        val datePicker =
+            MaterialDatePicker.Builder.datePicker()
+                .setTitleText("Select date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .setInputMode(MaterialDatePicker.INPUT_MODE_TEXT)
+                .build()
+
+        datePicker.show(parentFragmentManager, TAG)
+    }
+
 
     private fun showDatePickerDialogRange() {
         var dateRangeSelected: String
@@ -249,6 +280,14 @@ class Part2Page1Fragment() : Fragment() {
 
     fun onClickMissTake(view: View) {
         findNavController().navigate(R.id.action_part2Page1Fragment_to_part2Page7Fragment)
+    }
+
+    fun onClickHistoryWeightDiagramm(view: View) {
+        binding.lynDatePicker.isVisible = true
+        binding.lynWeightHistory.isVisible = false
+        binding.footerImage.isVisible = false
+        binding.parametrsButtonsChart.isVisible = false
+        Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show()
     }
 
 }

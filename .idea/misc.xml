@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../.gradle/caches/transforms-3/3ffdc0c238fa0af84071169e51e2a5e0/transformed/appcompat-1.4.1/res/drawable/abc_item_background_holo_light.xml" value="0.318" />
         <entry key="app/src/main/res/drawable/fon_xyplot.xml" value="0.58" />
         <entry key="app/src/main/res/drawable/ic_arrow_next.xml" value="0.2755" />
         <entry key="app/src/main/res/drawable/ic_bar_menu1.xml" value="0.3015" />
@@ -56,7 +57,7 @@
         <entry key="app/src/main/res/layout/fragment_page8_data2.xml" value="0.3473731884057971" />
         <entry key="app/src/main/res/layout/fragment_page9_data2.xml" value="0.38903985507246375" />
         <entry key="app/src/main/res/layout/fragment_part2_fragment1_to_user.xml" value="0.4010416666666667" />
-        <entry key="app/src/main/res/layout/fragment_part2_page1.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_part2_page1.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_part2_page2.xml" value="0.3075383589059373" />
         <entry key="app/src/main/res/layout/fragment_part2_page3.xml" value="0.4027777777777778" />
         <entry key="app/src/main/res/layout/fragment_part2_page4.xml" value="0.36335403726708076" />

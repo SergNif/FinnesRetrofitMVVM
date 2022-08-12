@@ -193,7 +193,7 @@ class SharedViewModels(application: Application) : AndroidViewModel(application)
 
     fun getUserFromSharedPreferenses(): User {
         val userName: User = getUserNameUseCase.execute()
-        Log.e(TAG, "${userName.id} ${userName.fullName} ${userName.email} ${userName.password}")
+        Log.e(TAG, "fun getUserFromSharedPreferenses() ${userName.id} ${userName.fullName} ${userName.email} ${userName.password}")
         val result = User(id = getIdFromSharedPreferenses(),
             fullName = userName.fullName,
             email = userName.email,
