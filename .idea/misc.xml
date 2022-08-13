@@ -16,6 +16,7 @@
         <entry key="app/src/main/res/drawable/ic_button_text_fon_page5.xml" value="0.369" />
         <entry key="app/src/main/res/drawable/ic_button_text_fon_page5_no_press.xml" value="0.369" />
         <entry key="app/src/main/res/drawable/ic_enterdatalogin.xml" value="0.3155" />
+        <entry key="app/src/main/res/drawable/ic_fon_datepicker.xml" value="0.3125" />
         <entry key="app/src/main/res/drawable/ic_fon_menu_button_part2_page1.xml" value="0.3125" />
         <entry key="app/src/main/res/drawable/ic_fon_menu_button_part2_page1_left.xml" value="0.173" />
         <entry key="app/src/main/res/drawable/ic_fon_menu_button_part2_page1_middle.xml" value="0.2825" />
@@ -43,6 +44,7 @@
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2916666666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15766902119071644" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.2916666666666667" />
+        <entry key="app/src/main/res/layout/fon_datepcker.xml" value="0.4188034188034188" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.3374094202898551" />
         <entry key="app/src/main/res/layout/fragment_menu_day_part2.xml" value="0.5" />
         <entry key="app/src/main/res/layout/fragment_new_one_menu_day.xml" value="0.5140398550724637" />
@@ -57,7 +59,7 @@
         <entry key="app/src/main/res/layout/fragment_page8_data2.xml" value="0.3473731884057971" />
         <entry key="app/src/main/res/layout/fragment_page9_data2.xml" value="0.38903985507246375" />
         <entry key="app/src/main/res/layout/fragment_part2_fragment1_to_user.xml" value="0.4010416666666667" />
-        <entry key="app/src/main/res/layout/fragment_part2_page1.xml" value="0.67" />
+        <entry key="app/src/main/res/layout/fragment_part2_page1.xml" value="0.607780612244898" />
         <entry key="app/src/main/res/layout/fragment_part2_page2.xml" value="0.3075383589059373" />
         <entry key="app/src/main/res/layout/fragment_part2_page3.xml" value="0.4027777777777778" />
         <entry key="app/src/main/res/layout/fragment_part2_page4.xml" value="0.36335403726708076" />
