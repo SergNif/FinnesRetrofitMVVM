@@ -161,18 +161,54 @@ class Part2Page1Fragment() : Fragment() {
             sharedViewModels._data3.weight = new_weigt_today.toString()
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
         }
+//        val datePicker =
+//            MaterialDatePicker.Builder.datePicker()
+//                .setTitleText("Select date")
+//                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+//                .setInputMode(MaterialDatePicker.INPUT_MODE_TEXT)
+//                .build()
+//
+//        datePicker.show(parentFragmentManager, TAG)
+//        datePicker.addOnPositiveButtonClickListener {
+//            // formatting date in dd-mm-yyyy format.
+//            val dateFormatter = SimpleDateFormat("dd-MM-yyyy")
+//            val date = dateFormatter.format(Date(it))
+//            Toast.makeText(context, "$date is selected", Toast.LENGTH_LONG).show()
+//
+//        }
+//
+//        // Setting up the event for when cancelled is clicked
+//        datePicker.addOnNegativeButtonClickListener {
+//            Toast.makeText(context, "${datePicker.headerText} is cancelled", Toast.LENGTH_LONG).show()
+//        }
+//
+//        // Setting up the event for when back button is pressed
+//        datePicker.addOnCancelListener {
+//            Toast.makeText(context, "Date Picker Cancelled", Toast.LENGTH_LONG).show()
+//        }
+
+    }
+
+    private fun showSmallDatePicker() {
+
+        val today = Calendar.getInstance()
+
+
+
+
         val datePicker =
             MaterialDatePicker.Builder.datePicker()
                 .setTitleText("Select date")
                 .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-                .setInputMode(MaterialDatePicker.INPUT_MODE_TEXT)
+                .setInputMode(MaterialDatePicker.INPUT_MODE_CALENDAR)
                 .build()
 
-        datePicker.show(parentFragmentManager, TAG)
         datePicker.addOnPositiveButtonClickListener {
             // formatting date in dd-mm-yyyy format.
             val dateFormatter = SimpleDateFormat("dd-MM-yyyy")
             val date = dateFormatter.format(Date(it))
+            Log.e(TAG, "showSmallDatePicker ${Date(it)}")
+            Log.e(TAG, "showSmallDatePicker ${dateFormatter.format(Date(it))}")
             Toast.makeText(context, "$date is selected", Toast.LENGTH_LONG).show()
 
         }
@@ -186,16 +222,6 @@ class Part2Page1Fragment() : Fragment() {
         datePicker.addOnCancelListener {
             Toast.makeText(context, "Date Picker Cancelled", Toast.LENGTH_LONG).show()
         }
-
-    }
-
-    private fun showSmallDatePicker() {
-        val datePicker =
-            MaterialDatePicker.Builder.datePicker()
-                .setTitleText("Select date")
-                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
-                .setInputMode(MaterialDatePicker.INPUT_MODE_TEXT)
-                .build()
 
         datePicker.show(parentFragmentManager, TAG)
 
@@ -315,6 +341,7 @@ class Part2Page1Fragment() : Fragment() {
     }
 
     fun onClickHistoryWeightDiagramm(view: View) {
+//        showSmallDatePicker()
         binding.lynDatePicker.isVisible = true
         binding.inputWeight.isVisible = true
         binding.lynWeightHistory.isVisible = false

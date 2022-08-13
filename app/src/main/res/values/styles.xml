@@ -135,12 +135,13 @@
         <item name="android:colorControlActivated">#7FAF80E3</item>
         <item name="android:textColorPrimaryInverse">#2C3339</item>
 
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:text">22sp</item>
 
         <item name="cornerFamily">cut</item>
         <!--days of the month-->
         <item name="android:textColorPrimary">#2196F3</item>
+        <item name="scaleFromTextSize">22sp</item>
         <!--days of the week-->
         <item name="android:textColorSecondary">#FAAFB2</item>
         <item name="android:headerBackground">#FF3365</item>

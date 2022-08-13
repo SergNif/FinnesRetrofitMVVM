@@ -274,6 +274,7 @@
 
 
 
+
                     android:layout_marginStart="16sp"
                     android:datePickerMode="calendar"
                     android:theme="@style/Datapicker" />
@@ -284,11 +285,12 @@
                 android:id="@+id/input_weight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="33sp"
-                android:paddingEnd="5sp"
+                android:background="@color/white"
+                android:layout_marginTop="33sp"
+                android:paddingEnd="15sp"
                 app:layout_constraintEnd_toEndOf="@id/lyn_datePicker"
 
-                app:layout_constraintTop_toTopOf="@id/lyn_datePicker"
+                app:layout_constraintTop_toBottomOf="@id/lyn_datePicker"
                 android:layout_marginHorizontal="25dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto_condensed_regular"
@@ -300,7 +302,7 @@
 
                 android:text="@={frag.new_weigt_today}"
                 android:textColor="#2C3339"
-                android:textColorHint="@color/color_green_fon"
+                android:textColorHint="#211223"
                 android:textSize="20sp"
 
                 />
