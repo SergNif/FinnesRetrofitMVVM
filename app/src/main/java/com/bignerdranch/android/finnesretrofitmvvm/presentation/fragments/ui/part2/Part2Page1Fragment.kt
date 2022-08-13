@@ -3,7 +3,9 @@ package com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.ui.pa
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.util.MonthDisplayHelper
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -139,6 +141,14 @@ class Part2Page1Fragment() : Fragment() {
         binding.textBack.setOnClickListener {
             backToFragment()
         }
+
+//        binding.inputWeight.setOnTouchListener(View.OnTouchListener {view, motionEvent ->
+//        while (motionEvent.action){
+//            MotionEvent.ACTION_MOVE
+//
+//        }
+//
+//        })
 
         sharedViewModels.lineDataSet.observe(viewLifecycleOwner) { lineDataSet ->
             chartStyle.styleLineDataSet(lineDataSet)
