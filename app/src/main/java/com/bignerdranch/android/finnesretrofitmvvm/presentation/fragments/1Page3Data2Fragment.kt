@@ -192,7 +192,7 @@ class Page3Data2Fragment : Fragment() {
 
 
     private fun createVariablesInSharedViewModels() {
-        sharedViewModels.sharedData3(3, binding.dataHeartAgePage3.text.toString().toInt(),
+        sharedViewModels.sharedData3(sharedViewModels.getIdFromSharedPreferenses(), binding.dataHeartAgePage3.text.toString().toInt(),
                 binding.dataHightPage3.text.toString().toInt(),
                 binding.dataWeightPage3.text.toString(),
                 binding.dataDiceweightPage3.text.toString()

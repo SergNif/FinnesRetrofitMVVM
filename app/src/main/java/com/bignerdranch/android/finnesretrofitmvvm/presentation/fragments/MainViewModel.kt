@@ -335,10 +335,10 @@ class MainViewModel(
         ageDataPage3.value = text
     }
 
-    fun changeWeght(text: String) {
+    fun changeWeght(text: String, date: String = LocalDateTime.now().toString().split("T")[0]) {
 //        dataPage3 = DataPage3(weight = text.toString().toDouble())
         dataPage3.weight = text//.toDouble()
-        dataPage3.date = LocalDateTime.now().toString().split("T")[0]
+        dataPage3.date = date//LocalDateTime.now().toString().split("T")[0]
         dataPage3.fitness_id = dataPage3.id
         weightDataPage3.value = text
     }

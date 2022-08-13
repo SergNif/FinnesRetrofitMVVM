@@ -20,10 +20,13 @@ import com.bignerdranch.android.finnesretrofitmvvm.R
 import com.bignerdranch.android.finnesretrofitmvvm.databinding.FragmentPart2Page1Binding
 import com.bignerdranch.android.finnesretrofitmvvm.domain.models.menu.MenuDayList
 import com.bignerdranch.android.finnesretrofitmvvm.domain.models.user.User
+import com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.MainActivity
+import com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.MainViewModel
 import com.github.mikephil.charting.data.LineData
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
+import java.time.LocalDateTime
 import java.util.*
 import kotlin.properties.Delegates
 
@@ -43,9 +46,9 @@ private var ARG_WEIGHT = "param3"
 class Part2Page1Fragment() : Fragment() {
     // TODO: Rename and change types of parameters
     lateinit var materialDatePicker: MaterialDatePicker<*>
-    var dyear: Int = 0
-    var dmonth: Int = 0
-    var dday: Int = 0
+    var dyear: Int = LocalDateTime.now().toString().split("T")[0].split("-")[0].toInt()
+    var dmonth: Int = LocalDateTime.now().toString().split("T")[0].split("-")[1].toInt()
+    var dday: Int = LocalDateTime.now().toString().split("T")[0].split("-")[2].toInt()
     var new_weigt_today: String = ""
 
     private var param1: String? = null
@@ -58,9 +61,11 @@ class Part2Page1Fragment() : Fragment() {
 
     //  var chartStyle: SparkLineStyle = SparkLineStyle(this) //= SparkLineStyle(context)
     private lateinit var viewModel: ViewModelPart2// by activityViewModels()
+    private lateinit var viewModelPage3: MainViewModel// by activityViewModels()
 
     private val sharedViewModels: SharedViewModels by activityViewModels()
     private val menuDayPart2ViewModels: MenuDayPart2ViewModel by activityViewModels()
+
     val recivedUserFromSharedPreferences: User
         get() = sharedViewModels.getUserFromSharedPreferenses()
 
@@ -113,6 +118,7 @@ class Part2Page1Fragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(ViewModelPart2::class.java)
+        viewModelPage3 = (activity as MainActivity).viewModel
 //        viewModel = (activity as MainActivity).viewModel
 
 
@@ -132,6 +138,7 @@ class Part2Page1Fragment() : Fragment() {
         binding.lynInputWeight.isVisible = false
         binding.lynLynDatePicker.isVisible = false
         binding.inputWeight.isVisible = false
+        binding.okDatapicker.isVisible = false
 
         binding.part2page1ButtonHistoryWeight.setOnClickListener {
 //            showDatePickerDialog()
@@ -355,6 +362,7 @@ class Part2Page1Fragment() : Fragment() {
 //        showSmallDatePicker()
         binding.lynLynDatePicker.isVisible = true
         binding.inputWeight.isVisible = true
+        binding.okDatapicker.isVisible = true
         binding.lynWeightHistory.isVisible = false
         binding.lynInputWeight.isVisible = true
         binding.footerImage.isVisible = false
@@ -363,21 +371,38 @@ class Part2Page1Fragment() : Fragment() {
     }
 
     fun onClickOkInputWeight(view: View){
+//        binding.lynLynDatePicker.isVisible = false
+//        binding.inputWeight.isVisible = false
+//        binding.lynInputWeight.isVisible = false
+//        binding.okDatapicker.isVisible = false
+//        binding.lynWeightHistory.isVisible = true
+//        binding.footerImage.isVisible = true
+//        binding.parametrsButtonsChart.isVisible = true
+        sharedViewModels._data3.weight = new_weigt_today
+        viewModelPage3.changeWeght(sharedViewModels._data3.weight, "$dday-$dmonth-$dyear")
+        Log.e(TAG, "onClickOkInputWeight  ${sharedViewModels._data3.weight} ${dday}-${dmonth}-${dyear}")
+        Log.e(TAG, "onClickOkInputWeight  ${viewModelPage3.dataPage3} ${dday}-${dmonth}-${dyear}")
+        viewModelPage3.launchUpdateDataPage3()
+    }
+
+    fun onClickOkDatePicker(view: View){
+        onClickOkInputWeight(view)
         binding.lynLynDatePicker.isVisible = false
         binding.inputWeight.isVisible = false
         binding.lynInputWeight.isVisible = false
+        binding.okDatapicker.isVisible = false
         binding.lynWeightHistory.isVisible = true
         binding.footerImage.isVisible = true
         binding.parametrsButtonsChart.isVisible = true
     }
 
-    fun onClickOkDatePicker(view: View){
-        binding.lynLynDatePicker.isVisible = false
-        binding.inputWeight.isVisible = false
-        binding.lynInputWeight.isVisible = false
-        binding.lynWeightHistory.isVisible = true
-        binding.footerImage.isVisible = true
-        binding.parametrsButtonsChart.isVisible = true
-    }
+//    fun changeWeght(text: String) {
+////        dataPage3 = DataPage3(weight = text.toString().toDouble())
+//        dataPage3.weight = text//.toDouble()
+//        dataPage3.date = LocalDateTime.now().toString().split("T")[0]
+//        dataPage3.fitness_id = dataPage3.id
+//        weightDataPage3.value = text
+//    }
+
 
 }
