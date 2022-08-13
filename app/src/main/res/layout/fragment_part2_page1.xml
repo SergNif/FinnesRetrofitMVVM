@@ -264,8 +264,9 @@
             android:id="@+id/lyn_lyn_datePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20sp"
+            android:layout_marginTop="5sp"
             android:background="@drawable/ic_fon_datepicker"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/parametrs">
@@ -274,10 +275,25 @@
                 android:id="@+id/lyn_datePicker"
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
-
-
                 android:datePickerMode="calendar"
                 android:theme="@style/Datapicker" />
+
+            <TextView
+                android:id="@+id/ok_datapicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="right"
+
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/ic_fon_datepicker"
+                android:backgroundTintMode="multiply"
+                android:fontFamily="@font/roboto_condensed_regular"
+                android:onClick="@{frag::onClickOkDatePicker}"
+                android:text="OK"
+                android:textAlignment="center"
+                android:textColor="@color/text_grey_page4"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -291,8 +307,7 @@
             android:paddingHorizontal="5sp"
             android:paddingTop="5sp"
             app:layout_constraintEnd_toEndOf="@id/lyn_lyn_datePicker"
-            app:layout_constraintTop_toTopOf="@id/lyn_lyn_datePicker"
-            >
+            app:layout_constraintTop_toTopOf="@id/lyn_lyn_datePicker">
 
             <EditText
                 android:id="@+id/input_weight"
@@ -323,14 +338,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
 
+                android:layout_marginStart="2sp"
                 android:layout_weight="2"
                 android:background="@drawable/ic_button_text_fon_page5_no_press"
                 android:fontFamily="@font/roboto_condensed_regular"
+                android:onClick="@{frag::onClickOkInputWeight}"
                 android:text="OK"
                 android:textSize="12sp"
-android:layout_marginStart="2sp"
-                app:layout_constraintBottom_toTopOf="@id/input_weight"
-                />
+                app:layout_constraintBottom_toTopOf="@id/input_weight" />
 
 
         </LinearLayout>

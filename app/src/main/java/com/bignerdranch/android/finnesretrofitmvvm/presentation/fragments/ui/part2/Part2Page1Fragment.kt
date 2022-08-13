@@ -129,7 +129,8 @@ class Part2Page1Fragment() : Fragment() {
 
 //Log.e(TAG, MyVariable.Singleton.publicData?.age.toString())
         backToFragment()
-        binding.lynDatePicker.isVisible = false
+        binding.lynInputWeight.isVisible = false
+        binding.lynLynDatePicker.isVisible = false
         binding.inputWeight.isVisible = false
 
         binding.part2page1ButtonHistoryWeight.setOnClickListener {
@@ -352,12 +353,31 @@ class Part2Page1Fragment() : Fragment() {
 
     fun onClickHistoryWeightDiagramm(view: View) {
 //        showSmallDatePicker()
-        binding.lynDatePicker.isVisible = true
+        binding.lynLynDatePicker.isVisible = true
         binding.inputWeight.isVisible = true
         binding.lynWeightHistory.isVisible = false
+        binding.lynInputWeight.isVisible = true
         binding.footerImage.isVisible = false
         binding.parametrsButtonsChart.isVisible = false
         Toast.makeText(context, "Click", Toast.LENGTH_SHORT).show()
+    }
+
+    fun onClickOkInputWeight(view: View){
+        binding.lynLynDatePicker.isVisible = false
+        binding.inputWeight.isVisible = false
+        binding.lynInputWeight.isVisible = false
+        binding.lynWeightHistory.isVisible = true
+        binding.footerImage.isVisible = true
+        binding.parametrsButtonsChart.isVisible = true
+    }
+
+    fun onClickOkDatePicker(view: View){
+        binding.lynLynDatePicker.isVisible = false
+        binding.inputWeight.isVisible = false
+        binding.lynInputWeight.isVisible = false
+        binding.lynWeightHistory.isVisible = true
+        binding.footerImage.isVisible = true
+        binding.parametrsButtonsChart.isVisible = true
     }
 
 }
