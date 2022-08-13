@@ -261,53 +261,46 @@
         </LinearLayout>
 
 
-                <DatePicker
-                    android:id="@+id/lyn_datePicker"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+        <DatePicker
+            android:id="@+id/lyn_datePicker"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
 
-                    android:layout_marginTop="20sp"
+            android:layout_marginTop="20sp"
 
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/parametrs"
+            android:datePickerMode="calendar"
+            android:theme="@style/Datapicker"
+            app:layout_constraintEnd_toEndOf="parent"
 
-
-
-
-                    android:layout_marginStart="16sp"
-                    android:datePickerMode="calendar"
-                    android:theme="@style/Datapicker" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/parametrs" />
 
 
+        <EditText
+            android:id="@+id/input_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="33sp"
+            android:layout_weight="1"
+            android:background="@color/white"
 
-            <EditText
-                android:id="@+id/input_weight"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:layout_marginTop="33sp"
-                android:paddingEnd="15sp"
-                app:layout_constraintEnd_toEndOf="@id/lyn_datePicker"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:hint="@{`Вес  ` +vmod._data3.weight}"
+            android:inputType="numberDecimal"
+            android:maxLength="6"
 
-                app:layout_constraintTop_toBottomOf="@id/lyn_datePicker"
-                android:layout_marginHorizontal="25dp"
-                android:layout_weight="1"
-                android:fontFamily="@font/roboto_condensed_regular"
+            android:paddingEnd="15sp"
 
-                android:hint="@{`Вес  ` +vmod._data3.weight}"
+            android:text="@={frag.new_weigt_today}"
+            android:textColor="#2C3339"
 
-                android:inputType="numberDecimal"
-                android:maxLength="6"
+            android:textColorHint="#211223"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/lyn_datePicker"
+            app:layout_constraintTop_toBottomOf="@id/lyn_datePicker"
 
-                android:text="@={frag.new_weigt_today}"
-                android:textColor="#2C3339"
-                android:textColorHint="#211223"
-                android:textSize="20sp"
-
-                />
-
-
+            />
 
 
         <LinearLayout

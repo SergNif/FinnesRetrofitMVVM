@@ -124,10 +124,17 @@
         <item name="layout_constraintVertical_bias">0.03</item>
     </style>
 
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+    </style>
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerSize">106dp</item>
+    </style>
 
     <style name="Datapicker" parent="Theme.AppCompat.Light" >
         <!--header background-->
         <item name="colorAccent">#FFA8A7</item>
+
 <!--        <item name="colorOnPrimary">#C5E0A6</item>-->
         <item name="colorPrimary">#AD8AEB</item>
 <!--        <item name="android:windowBackground">#D8EDD9</item>-->
@@ -135,16 +142,19 @@
         <item name="android:colorControlActivated">#7FAF80E3</item>
         <item name="android:textColorPrimaryInverse">#2C3339</item>
 
-        <item name="android:textSize">20sp</item>
-        <item name="android:text">22sp</item>
+<!--        <item name="android:text">22sp</item>-->
 
-        <item name="cornerFamily">cut</item>
+        <!--        <item name="cornerFamily">cut</item>-->
         <!--days of the month-->
         <item name="android:textColorPrimary">#2196F3</item>
         <item name="scaleFromTextSize">22sp</item>
         <!--days of the week-->
         <item name="android:textColorSecondary">#FAAFB2</item>
         <item name="android:headerBackground">#FF3365</item>
+        <item    name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.MediumComponent</item>
+        <item name="textInputStyle">@style/Widget.AppCompat.TextView</item>
+        <item name="android:textSize">15sp</item>
     </style>
 
     <style name="fon_menu_button_part2_sign_left">
