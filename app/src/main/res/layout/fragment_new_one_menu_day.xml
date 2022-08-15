@@ -14,13 +14,33 @@
             android:background="@color/white"
             android:textColor="#190F22">
 
+            <TextView
+
+                android:id="@+id/house_button"
+                style="@style/fon_menu_house_up_button_part2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:clickable="true"
+                android:layout_marginTop="30sp"
+                android:layout_marginRight="80sp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="15sp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toBottomOf="@+id/house_button">
+
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"

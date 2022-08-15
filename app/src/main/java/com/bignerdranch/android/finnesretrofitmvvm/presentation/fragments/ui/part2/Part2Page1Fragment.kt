@@ -405,6 +405,9 @@ class Part2Page1Fragment() : Fragment() {
     }
 
     fun setOneMenuDay() {
+        if (new_weigt_today.isNullOrEmpty())
+        {new_weigt_today = viewModelPage3.dataPage3.desired_weight }
+        Log.e(TAG, "setOneMenuDay ssssssssss ${viewModelPage3.dataPage3.desired_weight}")
         oneMenuDay =
             viewModelMenuDay.createUserMenuDay(
                 id = sharedViewModels.getIdFromSharedPreferenses(),

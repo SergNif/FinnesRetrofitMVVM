@@ -59,7 +59,9 @@ class NewOneMenuDayFragment : Fragment() {
             binding.weightOneMenuDay.setText(sharedViewModels.listMenuDay[sharedViewModels.positionRecycklerViewEdit!!].weight.toString())
 
         }
-
+binding.houseButton.setOnClickListener{
+    findNavController().navigate(R.id.action_newOneMenuDayFragment_to_menuDayPart2Fragment)
+}
         binding.enterMenuDay.setOnClickListener {
 
 //            Toast.makeText(activity, "TESTING BUTTON CLICK 1", Toast.LENGTH_SHORT).show()
