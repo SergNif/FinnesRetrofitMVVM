@@ -18,8 +18,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bignerdranch.android.finnesretrofitmvvm.R
 import com.bignerdranch.android.finnesretrofitmvvm.databinding.FragmentPart2Page1Binding
+import com.bignerdranch.android.finnesretrofitmvvm.domain.models.data.DataPage3
 import com.bignerdranch.android.finnesretrofitmvvm.domain.models.menu.MenuDayList
 import com.bignerdranch.android.finnesretrofitmvvm.domain.models.user.User
+import com.bignerdranch.android.finnesretrofitmvvm.domain.models.user.UserMenuDay
 import com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.MainActivity
 import com.bignerdranch.android.finnesretrofitmvvm.presentation.fragments.MainViewModel
 import com.github.mikephil.charting.data.LineData
@@ -45,10 +47,13 @@ private var ARG_WEIGHT = "param3"
  */
 class Part2Page1Fragment() : Fragment() {
     // TODO: Rename and change types of parameters
-    lateinit var materialDatePicker: MaterialDatePicker<*>
-    var dyear: Int = LocalDateTime.now().toString().split("T")[0].split("-")[0].toInt()
-    var dmonth: Int = LocalDateTime.now().toString().split("T")[0].split("-")[1].toInt()
-    var dday: Int = LocalDateTime.now().toString().split("T")[0].split("-")[2].toInt()
+//    lateinit var materialDatePicker: MaterialDatePicker<*>
+    lateinit var oneMenuDay: UserMenuDay
+    lateinit var userParam: DataPage3
+    lateinit var viewModelMenuDay:NewOneMenuDayViewModel
+    var dyear: String = LocalDateTime.now().toString().split("T")[0].split("-")[0]
+    var dmonth: String = LocalDateTime.now().toString().split("T")[0].split("-")[1]
+    var dday: String = LocalDateTime.now().toString().split("T")[0].split("-")[2]
     var new_weigt_today: String = ""
 
     private var param1: String? = null
@@ -120,8 +125,8 @@ class Part2Page1Fragment() : Fragment() {
         viewModel = ViewModelProvider(this).get(ViewModelPart2::class.java)
         viewModelPage3 = (activity as MainActivity).viewModel
 //        viewModel = (activity as MainActivity).viewModel
-
-
+         userParam = viewModelPage3.dataPage3
+        viewModelMenuDay = ViewModelProvider(this).get(NewOneMenuDayViewModel::class.java)
 //        viewModel.age = ARG_AGE
 //        viewModel.hight = ARG_HEIGHT
 //        viewModel.weight = ARG_WEIGHT
@@ -173,9 +178,9 @@ class Part2Page1Fragment() : Fragment() {
         ) { view, year, month, day ->
             val month = month + 1
             val msg = "You Selected: $day/$month/$year"
-            dmonth = month
-            dday = day
-            dyear = year
+            dmonth = "%02d".format(month)
+            dday = "%02d".format(day)
+            dyear = "%02d".format(year)
             sharedViewModels._data3.weight = new_weigt_today.toString()
             Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
         }
@@ -383,6 +388,9 @@ class Part2Page1Fragment() : Fragment() {
         Log.e(TAG, "onClickOkInputWeight  ${sharedViewModels._data3.weight} ${dday}-${dmonth}-${dyear}")
         Log.e(TAG, "onClickOkInputWeight  ${viewModelPage3.dataPage3} ${dday}-${dmonth}-${dyear}")
         viewModelPage3.launchUpdateDataPage3()
+
+        setOneMenuDay()
+        viewModelMenuDay.launchPostMenuDay(oneMenuDay,4)
     }
 
     fun onClickOkDatePicker(view: View){
@@ -394,6 +402,38 @@ class Part2Page1Fragment() : Fragment() {
         binding.lynWeightHistory.isVisible = true
         binding.footerImage.isVisible = true
         binding.parametrsButtonsChart.isVisible = true
+    }
+
+    fun setOneMenuDay() {
+        oneMenuDay =
+            viewModelMenuDay.createUserMenuDay(
+                id = sharedViewModels.getIdFromSharedPreferenses(),
+                age = userParam.age,
+                date = "${dday}-${dmonth}-${dyear}",//funcData(),
+                time = funcTime(),
+                desired_weight = userParam.desired_weight.toDouble(),
+                height = userParam.height,
+                weight = new_weigt_today.toDouble(),//  binding.weightOneMenuDay.text.toString().toDouble(),
+                //userParam.weight.toDouble(),
+                fitness_id = sharedViewModels.getIdFromSharedPreferenses(),
+                header = "weight", //binding.headerMenuDay.text.toString(),
+                menu = "weight" //binding.menuDay.text.toString(),
+            )
+    }
+
+    private fun funcTime(): String {
+        return LocalDateTime.now().toString().split(".")[0].split("T")[1].split(":").slice(0..1).joinToString(
+            //   prefix = "[",
+            separator = ":",
+            // postfix = "]",
+            //limit = 3,
+            //truncated = "...",
+            //transform = { it.uppercase() }
+        )
+    }
+
+    private fun funcData(): String {
+        return LocalDateTime.now().toString().split(".")[0].split("T")[0]
     }
 
 //    fun changeWeght(text: String) {

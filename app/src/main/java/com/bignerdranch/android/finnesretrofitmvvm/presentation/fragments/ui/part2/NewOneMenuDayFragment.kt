@@ -81,6 +81,7 @@ class NewOneMenuDayFragment : Fragment() {
                 viewModel.launchPostMenuDay(oneMenuDay,
                     sharedViewModels.listMenuDay[sharedViewModels.positionRecycklerViewEdit!!].id_note+1)
             }else{viewModel.launchPostMenuDay(oneMenuDay,0)}
+
             sharedViewModels.positionRecycklerViewEdit = null
             Log.e(TAG, "Query ${sharedViewModels.positionRecycklerViewEdit}")
             menuDayPart2ViewModel.launchGetMenuList(sharedViewModels.startDataAPI.value.toString(), sharedViewModels.endDataAPI.value.toString())
