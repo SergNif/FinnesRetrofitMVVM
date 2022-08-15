@@ -384,13 +384,13 @@ class Part2Page1Fragment() : Fragment() {
 //        binding.footerImage.isVisible = true
 //        binding.parametrsButtonsChart.isVisible = true
         sharedViewModels._data3.weight = new_weigt_today
-        viewModelPage3.changeWeght(sharedViewModels._data3.weight, "$dday-$dmonth-$dyear")
-        Log.e(TAG, "onClickOkInputWeight  ${sharedViewModels._data3.weight} ${dday}-${dmonth}-${dyear}")
-        Log.e(TAG, "onClickOkInputWeight  ${viewModelPage3.dataPage3} ${dday}-${dmonth}-${dyear}")
+        viewModelPage3.changeWeght(sharedViewModels._data3.weight, "$dyear-$dmonth-${dday}r")
+        Log.e(TAG, "onClickOkInputWeight  ${sharedViewModels._data3.weight} ${dyear}-${dmonth}-${dday}")
+        Log.e(TAG, "onClickOkInputWeight  ${viewModelPage3.dataPage3} ${dyear}-${dmonth}-${dday}")
         viewModelPage3.launchUpdateDataPage3()
 
         setOneMenuDay()
-        viewModelMenuDay.launchPostMenuDay(oneMenuDay,4)
+        viewModelMenuDay.launchPostMenuDay(oneMenuDay,0)
     }
 
     fun onClickOkDatePicker(view: View){
@@ -409,7 +409,7 @@ class Part2Page1Fragment() : Fragment() {
             viewModelMenuDay.createUserMenuDay(
                 id = sharedViewModels.getIdFromSharedPreferenses(),
                 age = userParam.age,
-                date = "${dday}-${dmonth}-${dyear}",//funcData(),
+                date = "${dyear}-${dmonth}-${dday}",//funcData(),
                 time = funcTime(),
                 desired_weight = userParam.desired_weight.toDouble(),
                 height = userParam.height,
